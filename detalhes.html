@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produto - Overhaul</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header style="background-image: url('src/img/background.png')">
+      <!-- container -->
+      <div class="container">
+        <nav>
+          <a href="index.html">
+            <img class="logo" src="src/img/logo.png" alt="Logo" />
+          </a>
+          <ul class="ul">
+            <a href="iniciar_sessao.html">iNICIAR SESSÃO</a>
+            <a href="nossos-carros.html">NOSSOS CARROS</a>
+            <a href="menu.html">MENU</a>
+            <div class="close-icon" onclick="closeMenu()">
+              <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+          </ul>
+          <div class="menu-icon" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </div>
+        </nav>
+        <!-- banner -->
+        <!-- end banner -->
+      </div>
+      <!-- end container -->
+    </header>
+    <!-- end header -->
+
+    <div class="product-container">
+      <!-- Galeria de imagens para telas maiores -->
+      <div class="image-gallery">
+        <div class="thumbnail">
+          <img src="carro2.png" alt="Carro thumbnail 1" />
+        </div>
+        <div class="thumbnail">
+          <img src="carro1.png" alt="Carro thumbnail 2" />
+        </div>
+        <div class="thumbnail">
+          <img src="carro2.png" alt="Carro thumbnail 3" />
+        </div>
+        <div class="thumbnail">
+          <img src="carro1.png" alt="Carro thumbnail 4" />
+        </div>
+      </div>
+
+      <!-- Imagem principal que estará sempre visível -->
+      <div class="main-image">
+        <img src="carro2.png" alt="Carro principal" />
+      </div>
+
+      <!-- Carrossel apenas para telas menores que 670px -->
+      <div class="carousel">
+        <button class="carousel-btn prev" onclick="changeSlide(-1)">
+          &#10094;
+        </button>
+        <div class="carousel-images">
+          <img src="carro2.png" alt="Carro principal" class="carousel-slide" />
+          <img
+            src="carro1.png"
+            alt="Carro thumbnail 1"
+            class="carousel-slide"
+          />
+          <img
+            src="carro2.png"
+            alt="Carro thumbnail 2"
+            class="carousel-slide"
+          />
+          <img
+            src="carro1.png"
+            alt="Carro thumbnail 3"
+            class="carousel-slide"
+          />
+        </div>
+        <button class="carousel-btn next" onclick="changeSlide(1)">
+          &#10095;
+        </button>
+      </div>
+
+      <!-- Detalhes do produto -->
+      <div class="product-details">
+        <p>Nome: Carro</p>
+        <p><strong>Marca:</strong> Marca do Carro A</p>
+        <p><strong>Avaliação:</strong> 5.0 ★★★★★</p>
+        <hr style="border: 1px solid #000; width: 90%;">
+        <p class="preco">A partir de R$ 300.000</p>
+        <p class="desconto">à vista no Pix (10% off)</p>
+        <div class="container-detalhes">
+          <div class="color-opcoes">
+            <p>Cor:</p>
+            <span class="color" style="background-color: #a57a65"></span>
+            <span class="color" style="background-color: #ffffff"></span>
+            <span class="color" style="background-color: #2d2e83"></span>
+          </div>
+
+          <div class="qtd">
+            <p for="quantidade">Quantidade:</p>
+            <select id="quantidade" name="quantidade">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div>
+        </div>
+        <div class="buttons">
+          <a href="#" class="buy-now">Comprar agora</a>
+          <a href="#" class="add-to-cart">Adicionar ao carrinho</a>
+        </div>
+        <div class="description">
+          <p>Descrição:</p>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged. It was popularised in the 1960s
+            with the release of Letraset sheets containing Lorem Ipsum passages,
+            and more recently with desktop publishing software like Aldus
+            PageMaker including versions of Lorem Ipsum
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="footer_content">
+        <div id="footer_contacts">
+          <h1>Logo</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+
+          <div id="footer_social_media">
+            <a href="#" class="footer-link" id="instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" class="footer-link" id="facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="#" class="footer-link" id="whatsapp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </div>
+        </div>
+
+        <ul class="footer-list">
+          <li>
+            <h3>Blog</h3>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Tech</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Adventures</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Music</a>
+          </li>
+        </ul>
+
+        <ul class="footer-list">
+          <li>
+            <h3>Products</h3>
+          </li>
+          <li>
+            <a href="#" class="footer-link">App</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Desktop</a>
+          </li>
+          <li>
+            <a href="#" class="footer-link">Cloud</a>
+          </li>
+        </ul>
+
+        <div id="footer_subscribe">
+          <h3>Subscribe</h3>
+
+          <p>Enter your e-mail to get notified about our news solutions</p>
+
+          <div id="input_group">
+            <input type="email" id="email" />
+            <button>
+              <i class="fa-regular fa-envelope"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="footer_copyright">
+        © 2024 Todos os Direitos Reservados OverHaul
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
